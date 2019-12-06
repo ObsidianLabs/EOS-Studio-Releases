@@ -2,7 +2,7 @@ name: Build
 
 on:
   release:
-    types: [published, prereleased]
+    types: [published]
 
 jobs:
   bump:
