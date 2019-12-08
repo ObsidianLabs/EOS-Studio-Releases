@@ -77,8 +77,11 @@ jobs:
           # Windows code signing certificate
           windows_certs: ${{ secrets.windows_certs }}
           windows_certs_password: ${{ secrets.windows_certs_password }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          sentry_organization: ${{ secrets.sentry_organization }}
+          sentry_project: ${{ secrets.sentry_project }}
+          sentry_api_token: ${{ secrets.sentry_api_token }}
           build_script: yarn buildelectron
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload assets
         uses: AButler/upload-release-assets@v2.0
